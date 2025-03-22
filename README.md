@@ -71,3 +71,11 @@ git clone https://github.com/Mazid2003/Mind-reader-using-javascript.git
 2️⃣ Open the index.html file in a browser.
 
 3️⃣ Think of a number and enjoy the mind-reading magic! 🎩✨
+
+**💬 Want to Collaborate?**
+
+Feel free to fork the repo, submit PRs, and give your feedback! 🔥💡
+
+**📜 License**
+
+This project is open-source under the MIT License. Feel free to use and modify it! 🚀
