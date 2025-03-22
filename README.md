@@ -66,7 +66,7 @@ After a few seconds, the app "predicts" the number the user entered.
 
 1️⃣ Clone the repository:
 
-git clone https://github.com/your-username/mind-reader.git
+git clone https://github.com/Mazid2003/Mind-reader-using-javascript.git
 
 2️⃣ Open the index.html file in a browser.
 
