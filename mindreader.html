@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Reader 🧠</title>
+    <style>
+        /* Background Animation */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e90ff, #2b86c5);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            font-size: 18px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background: #ffcc00;
+            color: black;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffdd44;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            opacity: 0.5;
+            border-radius: 50%;
+            animation: float 5s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+            100% { transform: translateY(0) scale(1); opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>🔮 Mind Reader 🧠 🔮</h1>
+        <p>Think of a number between <strong>1 and 100</strong> and enter it below:</p>
+        <input type="number" id="userNumber" min="1" max="100">
+        <button onclick="readMind()">Reveal My Thought</button>
+        <p id="loadingText" class="loading hidden">Scanning your mind... 🤯</p>
+        <p id="result" class="hidden"></p>
+    </div>
+
+    <script>
+        function readMind() {
+            let userInput = document.getElementById("userNumber").value;
+            let loadingText = document.getElementById("loadingText");
+            let resultText = document.getElementById("result");
+
+            if (userInput < 1 || userInput > 100 || userInput === "") {
+                alert("Enter a number between 1 and 100!");
+                return;
+            }
+
+            // Show loading text and hide result
+            loadingText.classList.remove("hidden");
+            resultText.classList.add("hidden");
+
+            // Fake scanning effect
+            let messages = [
+                "Scanning your mind... 🧠",
+                "Analyzing brain waves... 🔍",
+                "Decoding your thoughts... 🤯",
+                "Almost there... ⏳",
+                "Got it! 🎉"
+            ];
+
+            let index = 0;
+            let interval = setInterval(() => {
+                if (index < messages.length) {
+                    loadingText.textContent = messages[index];
+                    index++;
+                } else {
+                    clearInterval(interval);
+                    loadingText.classList.add("hidden");
+                    resultText.classList.remove("hidden");
+                    resultText.innerHTML = `😲 You were thinking about: <strong>${userInput}</strong>!`;
+                }
+            }, 1000);
+        }
+
+        // Generate Floating Particles
+        function createParticles() {
+            for (let i = 0; i < 20; i++) {
+                let particle = document.createElement("div");
+                particle.classList.add("particle");
+                document.body.appendChild(particle);
+
+                let size = Math.random() * 6 + 4;
+                let posX = Math.random() * window.innerWidth;
+                let posY = Math.random() * window.innerHeight;
+
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}px`;
+                particle.style.top = `${posY}px`;
+
+                particle.style.animationDuration = `${Math.random() * 5 + 2}s`;
+                particle.style.animationDelay = `${Math.random() * 2}s`;
+            }
+        }
+
+        createParticles();
+    </script>
+
+</body>
+</html>
