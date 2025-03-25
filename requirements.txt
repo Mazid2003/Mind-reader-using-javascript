@@ -1,1 +1,36 @@
+Requirements for Running the Mind Reader Project 🧠🔮
 
+Since this is a web-based project using HTML, CSS, and JavaScript, the requirements are minimal. Here’s what you need:
+
+1️⃣ System Requirements
+
+✅ Any modern web browser (Google Chrome, Firefox, Edge, Safari)
+✅ A text editor (VS Code, Sublime Text, Notepad++, etc.)
+✅ (Optional) A local server (for advanced testing)
+
+2️⃣ Dependencies (Libraries & Tools)
+
+This project is built with pure HTML, CSS, and JavaScript, meaning:
+❌ No external libraries or frameworks required!
+
+However, if you want to extend it, you can optionally use:
+
+Live Server (VS Code extension) – To preview the project with auto-reload.
+Git – If you plan to push it to GitHub.
+
+3️⃣ Steps to Run the Project
+
+
+1️⃣ Download or Clone the Repository
+
+git clone https://github.com/Mazid2003/Mind-reader-using-javascript.git
+
+2️⃣ Open the index.html file in any web browser.
+
+3️⃣ Think of a number, enter it, and let the magic happen! 🎩✨
+
+4️⃣ Optional Enhancements
+
+🔹 Host it online using GitHub Pages, Netlify, or Vercel.
+🔹 Enhance with AI using a simple ML model to make actual predictions.
+🔹 Make it mobile-friendly with better responsive design.
