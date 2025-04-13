@@ -56,7 +56,13 @@ After a few seconds, the app "predicts" the number the user entered.
 
 **Screenshots**
 
-C:\Users\USER\Desktop\project\screenshots\screenshot_2025-04-13_09-20-05.png
+**UI**
+![screenshot_2025-04-13_09-20-05](https://github.com/user-attachments/assets/710973b7-4f18-4eb6-9e1c-65be6a714077)
+
+**Output**
+![screenshot_2025-04-13_09-20-35](https://github.com/user-attachments/assets/026b01d5-d970-43cd-b114-88e97a98429e)
+
+![screenshot_2025-04-13_09-21-35](https://github.com/user-attachments/assets/6e70e592-7cd9-44e3-8d19-ba5d705e84c4)
 
 **Future Enhancements**
 
