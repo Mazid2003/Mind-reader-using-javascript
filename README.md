@@ -54,6 +54,10 @@ A series of scanning messages appear, changing every second.
 
 After a few seconds, the app "predicts" the number the user entered.
 
+**Screenshots**
+
+C:\Users\USER\Desktop\project\screenshots\screenshot_2025-04-13_09-20-05.png
+
 **Future Enhancements**
 
 🚀 Add speech synthesis to make the app talk while reading the mind.
